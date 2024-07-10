@@ -1,0 +1,95 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: serif;
+}
+.background {
+    height: 100vh;
+    width: 100%;
+}
+.night-sky {
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(to top, rgb(0, 55, 113), rgb(32, 32, 32));
+    @keyframes swinging {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(-10deg);
+        } 
+        50% {
+            transform: rotate(0deg);
+        }
+        75% {
+            transform: rotate(10deg);
+        }
+    }
+    .night-lamb {
+        position: fixed;
+        top: -575px;
+        left: 45%;
+        height:1200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        animation: swinging infinite 8s;
+        .wire {
+            background: black;
+            width: 20px;
+            height: 400px;
+        }
+        .bulb-hanger {
+            width: 35px;
+            height: 40px;
+            background: black ;
+        }
+        .bulb {
+            margin-top: -30px;
+            width: 100px;
+            height: 100px;
+            background: url("bulb.png");
+            // background-color: white;
+            background-position: center;
+            background-size: cover;
+            transform: rotate(180deg);
+            .on {
+                visibility: visible;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: -20px;
+                left: -0px;
+                border-radius: 50%;
+                background: #ffd900ea;
+    box-shadow: 5px 5px 80px gold, 5px -5px 80px gold, -5px 5px 80px gold, -5px -5px 80px gold;
+            }
+        }
+        .shade {
+            visibility: visible;
+            margin-top: 150px;
+            width: 50px;
+            height: 50px;
+            background: #d4c438;
+            box-shadow: 20px 20px 80px gold, -20px 20px 80px gold, 20px -20px 80px gold, -20px -20px 80px gold;
+            border-radius: 50%;
+        }
+    }
+}
+.ground {
+    width: 100%;
+    height: 20%;
+    background: #000C19;
+    display: flex;
+    justify-content: center;
+    .text {
+        font-style: italic;
+        display: none;
+        margin-left: 40px;
+        padding-top: 20px;
+        font-size: 25px;
+        color: gold;
+    text-shadow: 0px 0px 10px gold, 0px 0px 10px gold, 0px 0px 10px gold, 0px 0px 10px gold;
+    }
+}
